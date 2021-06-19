@@ -3,7 +3,7 @@ import './scss/main.scss';
 function App() {
   return (
     <div className="xx">
-      <p>Działa </p>
+      <p>Działa  </p>
     </div>
   );
 }
