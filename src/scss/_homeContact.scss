@@ -1,0 +1,86 @@
+.contactContainer{
+    background: no-repeat;
+    padding-bottom: 300px;
+    background-position-x: center;
+}
+.formContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 55%;
+    padding-top: 200px;
+}
+.formContainer h1{
+    text-align: center;
+    font: normal normal normal 38px Open Sans;
+    letter-spacing: -0.76px;
+    color: #3C3C3C;
+}
+.contactNameEmail{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    text-align: left;
+}
+.contactNameEmail input{
+    max-width: 256px;
+    border: none;
+    border-bottom: 0.75px solid #3C3C3C;
+    background-color:rgba(0, 0, 0, 0);
+}
+.contactName{
+    display: flex;
+    flex-direction: column;
+}
+.contactEmail{
+    display: flex;
+    flex-direction: column;
+}
+.contactMsg{
+    display: flex;
+    flex-direction: column;
+    padding-top: 44px;
+}
+.contactMsg textarea{
+    border: none;
+    border-bottom: 0.75px solid #3C3C3C;
+    min-height: 150px;
+    background-color:rgba(0, 0, 0, 0);
+}
+.msgSuccess{
+    display: none;
+    padding-bottom: 30px;
+    color: green;
+}
+.msgError{
+    display: none;
+    padding-bottom: 30px;
+    color: red;
+}
+.contactUsForm label{
+    font: normal normal 600 16px Open Sans;
+}
+.contactBtnBox{
+    padding-top: 45px;
+    text-align: right;
+}
+.contactBtn{
+    border: 0.75px solid #3C3C3C;
+    background-color:rgba(0, 0, 0, 0);
+    font: normal normal 300 18px Open Sans;
+    color: #000000;
+    padding: 7px 25px;
+    cursor: pointer;
+}
+.footerContainer{
+    display: flex;
+}
+.footerContent{
+    margin-left: 40%;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding-right: 140px;
+}
+

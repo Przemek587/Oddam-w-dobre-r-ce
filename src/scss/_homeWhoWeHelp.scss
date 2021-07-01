@@ -1,0 +1,75 @@
+.whoWeHelpContainer{
+    padding: 0px 250px;
+}
+.whoWeHelpHeader{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.whoWeHelpHeader h1{
+    color: #3C3C3C;
+    font: normal normal normal 38px Open Sans;
+    padding-top: 70px;
+}
+.whoWeHelpBtns{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 60px;
+    gap: 20px;
+    align-items: center;
+}
+.whoWeHelBtn{
+    border: none;
+    justify-content: center;
+    color: #3C3C3C;
+    font: normal normal normal 24px Open Sans;
+    background-color: white;
+    width: 200px;
+    min-height: 80px;
+    text-align: center;
+    cursor: pointer;
+}
+.logRegImg{
+    max-width: 250px;
+    max-height: 35px;
+    align-self: center;
+}
+.withBorder{
+    border-bottom: 1px solid grey;
+    padding-bottom: 30px;
+}
+.whoWeHelpBox h2{
+    text-align: center;
+    color: #3C3C3C;
+    font: normal normal normal 22px Open Sans;
+    // padding-bottom: 60px;
+    // padding-left: 200px;
+    // padding-right: 200px;
+    padding: 60px 200px;
+}
+.whoWeHelpContent h3{
+    padding-top: 30px;
+    color: #3C3C3C;
+    font: normal normal 300 26px Merriweather;
+}
+.whoWeHelpContent p{
+    color: #3C3C3C;
+    font: italic normal 300 18px Merriweather;
+}
+.rightPar{
+    text-align: right;
+}
+.whoWeHelpContent1Btns{
+    display: flex;
+    justify-content: center;
+    padding-top: 70px;
+    gap: 20px;
+}
+.whoWeHelpContent1Btns button{
+    border: none;
+    align-self: center;
+    background-color: white;
+    color: #3C3C3C;
+    font: normal normal normal 18px Open Sans;
+    cursor: pointer;
+}

@@ -2,6 +2,15 @@
 @import "./settings/_fonts";
 @import "./generic/_reset";
 
+@import "./homeHeader";
+@import "./logReg";
+@import "./logout";
+@import "./homeThreeColumns";
+@import "./homeSingleSteps";
+@import "./homeAboutUs";
+@import "./homeWhoWeHelp";
+@import "./homeContact";
+
 body{
     font-family: $font-base;
 }

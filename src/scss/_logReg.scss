@@ -1,0 +1,48 @@
+.logRegContainer{
+    text-align: center;
+    padding-top: 123px;
+    text-align: -webkit-center;
+}
+.logRegHeader{
+    color: #3C3C3C;
+    font-size: 40px;    
+}
+.logRegImg{
+    padding-top: 30px;
+    padding-bottom: 67px;
+}
+.logRegFormContainer{
+    background-color: #F0F1F1;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+    max-width: 400px;
+    text-align: left;
+    gap: 20px;
+}
+.logRegFormContainer input{
+    background-color: #F0F1F1;
+    border: none;
+    border-bottom: 1px solid #707070;
+}
+.logRegButtonsContainer{
+    padding: 40px;
+    max-width: 500px;
+    display: flex;
+    justify-content: space-between;
+}
+.logRegButtonsContainer a{
+    font-family: $font-base, light;
+    font-size: 18px;
+    color: #000000;
+    border: none;
+    background-color: white;
+    text-decoration: none;
+}
+.logRegButtonsContainer input{
+    font-family: $font-base, light;
+    font-size: 18px;
+    color: #000000;
+    border: none;
+    background-color: white;
+}

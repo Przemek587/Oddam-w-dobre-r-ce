@@ -1,0 +1,21 @@
+.threeColumnsContainer{
+    display: flex;
+    justify-content: space-between;
+}
+.threeColumnsContainer h1{
+    color:#5E5322;
+    text-align: center;
+    padding-top: 46px;
+    font: normal normal 300 90px Open Sans;
+}
+.threeColumnsContainer h2{
+    color: #3C3C3C;
+    text-align: center;
+    font: normal normal normal 18px Open Sans;
+}
+.threeColumnsContainer p{
+    color: #3C3C3C;
+    text-align: center;
+    font: normal normal 300 16px Merriweather;
+    padding: 40px 60px;
+}

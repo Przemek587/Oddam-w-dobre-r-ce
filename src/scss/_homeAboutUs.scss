@@ -1,0 +1,30 @@
+.aboutUsContainer{
+    display: flex;
+    text-align: center;
+    min-height: 750px;
+}
+.aboutUsText{
+    width: 50%;
+    background-color: #F0F1F1;
+}
+.aboutUsText h1{
+    color: #3C3C3C;
+    font: normal normal normal 38px Open Sans;
+    padding-top: 100px;
+}
+.aboutUsText p{
+    color: #3C3C3C;
+    font: normal normal normal 30px Open Sans;
+    padding: 40px 100px;
+}
+.signature{
+    float: right;
+    padding-right: 100px;
+}
+.aboutUsImg{
+    width: 50%;
+}
+.peopleImg{
+    width: 100%;
+    min-height: 750px;
+}
