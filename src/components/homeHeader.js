@@ -1,5 +1,5 @@
 import React from "react";
-import {HashRouter,Route,Link,Switch,NavLink,} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import HomeHeroImage from "../assets/assets/Home-Hero-Image.jpg";
 import Decoration from "../assets/assets/Decoration.svg"
 import NavBar from "./navBar";

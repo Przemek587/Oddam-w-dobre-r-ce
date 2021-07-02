@@ -1,28 +1,30 @@
-import React, {useState, useEffect} from "react";
-import {HashRouter,Route,Link,Switch,NavLink,} from 'react-router-dom';
+import React, { useState, useRef } from "react";
+import {Link, useHistory} from 'react-router-dom';
 import Decoration from "../assets/assets/Decoration.svg"
+import { useAuth } from "../contexts/AuthContext";
 
-const Login=()=>{
+export default function Login(){
 
-    const[email,setEmail]= useState("");
-    const[password,setPassword]=useState("");
+    const emailRef = useRef()
+    const passwordRef = useRef()
+    const {login} = useAuth()
+    const[error,setError] = useState("")
+    const[loading,setLoading] = useState(false)
+    const history = useHistory()
 
-    const handleEmail=(e)=>{
-        setEmail(e.target.value)
-    };
-    const handlePassword=(e)=>{
-        setPassword(e.target.value)
-    };
-    const handleLoginValidation=(e)=>{
-        let regEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        if(!regEmail.test(email)){
-            alert( 'Niepoprawny Email');
-        }else if(password.length<6){
-            alert("Hasło musi mieć przynajmniej 6 znaków")
-        }else{
-            alert("udało się zalogować")
+    async function handleSubmit(e){
+        e.preventDefault()          
+
+        try{
+            setError("")
+            setLoading(true)
+            await login(emailRef.current.value, passwordRef.current.value)
+            history.push("/oddam-rzeczy")
+        }catch{
+            setError("nie udało się zalogowac")
         }
-    };
+        setLoading(false)
+    }
 
     function changeBorder(e) {
         e.target.style.border = "0.75px solid #FAD648"
@@ -41,8 +43,8 @@ const Login=()=>{
             </div>
             <div className="homeHeaderContainer">
                 <div className="logRegButtons">
-                    <Link to = "/login" className="btn logRegBtn logBtn" onMouseOver={changeBorder} onMouseLeave={changeBorderBack}>Zaloguj</Link>
-                    <Link to = "/registration" className="btn logRegBtn" onMouseOver={changeBorder} onMouseLeave={changeBorderBack}>Załóż konto</Link>
+                    <Link to = "/login" className="btn logRegBtn logBtn" style={{border:"0.75px solid transparent"}} onMouseOver={changeBorder} onMouseLeave={changeBorderBack}>Zaloguj</Link>
+                    <Link to = "/registration" className="btn logRegBtn" style={{border:"0.75px solid transparent"}} onMouseOver={changeBorder} onMouseLeave={changeBorderBack}>Załóż konto</Link>
                 </div>
             <nav className="nav" id="navbar">
                 <div className="navContent">
@@ -60,15 +62,16 @@ const Login=()=>{
         <div className="logRegContainer">
             <h1 className="logRegHeader">Zaloguj się</h1>
             <img className="logRegImg" src={Decoration}/>
-            <form className="logRegForm" onSubmit={handleLoginValidation}>
+            <h2>{error}</h2>
+            <form className="logRegForm" onSubmit={handleSubmit}>
                 <div className="logRegFormContainer">
                 <label for="email" >Email</label>
-                <input type="text" name="Email" onChange={handleEmail}/>
-                <label for="password">Hasło</label>
-                <input type="password" onChange={handlePassword} />
+                <input type="text" name="Email" ref={emailRef} />
+                <label for="password" >Hasło</label>
+                <input type="password" ref={passwordRef}/>
                 </div>
                 <div className="logRegButtonsContainer">
-                    <input type="submit" value="Zaloguj" onMouseOver={bordersButtons} onMouseLeave={changeBorderBack}></input>
+                    <input type="submit" value="Zaloguj"  onMouseOver={bordersButtons} onMouseLeave={changeBorderBack}></input>
                     <Link to="/registration"  onMouseOver={bordersButtons} onMouseLeave={changeBorderBack}>Załóż konto</Link>
                 </div>
             </form>
@@ -79,4 +82,3 @@ const Login=()=>{
     )
 };
 
-export default Login;

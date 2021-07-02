@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from "react";
-import Home from "./home";
 import BackgroundContact from "../assets/assets/Background-Contact-Form.jpg";
 import Decoration from "../assets/assets/Decoration.svg";
 import FacebookImg from "../assets/assets/Facebook.svg";
