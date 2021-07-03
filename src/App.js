@@ -4,23 +4,23 @@ import Home from './components/home';
 import Login from './components/login';
 import Registration from './components/registration';
 import Logout from './components/logout';
-import {AuthProvider} from "./contexts/AuthContext"
-import Dashboard from './components/dashboard';
-import PrivateRoute from './components/PrivateRoute';
+import Form from './components/form';
+import {AuthProvider} from "./contexts/AuthContext";
 
 function App() {
+  
   return (
-    <Router>
       <AuthProvider>
+    <Router>
         <Switch>
         <Route exact path ='/' component={Home}/>
         <Route path ='/login' component={Login}/>
         <Route path ='/registration' component={Registration}/>
         <Route path ='/logout' component={Logout}/>
-        <PrivateRoute path ='/oddam-rzeczy' component={Dashboard}/>
+        <Route path ='/oddaj-rzeczy' component={Form}/>
         </Switch>
-    </AuthProvider>
     </Router>
+    </AuthProvider>
 
   );
 };

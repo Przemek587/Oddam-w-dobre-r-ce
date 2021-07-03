@@ -8,6 +8,7 @@ export default function Login(){
     const emailRef = useRef()
     const passwordRef = useRef()
     const {login} = useAuth()
+    const {currentUser} = useAuth()
     const[error,setError] = useState("")
     const[loading,setLoading] = useState(false)
     const history = useHistory()
@@ -19,7 +20,7 @@ export default function Login(){
             setError("")
             setLoading(true)
             await login(emailRef.current.value, passwordRef.current.value)
-            history.push("/oddam-rzeczy")
+            history.push("/")
         }catch{
             setError("nie udało się zalogowac")
         }
@@ -35,7 +36,7 @@ export default function Login(){
     function bordersButtons(e) {
         e.target.style.border = "0.75px solid #3C3C3C"
     };
-    
+    // console.log(currentUser);
     return(
         <>
         <div className="homeHeader">
